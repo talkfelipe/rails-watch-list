@@ -1,0 +1,14 @@
+<div class="container">
+  <nav class="border shadow rounded p-3">
+    <%= link_to "Create new list", new_list_path, class: "btn btn-primary" %>
+  </nav>
+  <div class="border shadow p-3">
+    <% @lists.each do |list| %>
+      <div class="border rounded m-3 p-3">
+        <%= link_to list_path(list), class: "btn" do %>
+          <% list.name %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
